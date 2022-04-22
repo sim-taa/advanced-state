@@ -3,7 +3,10 @@ import { combineReducers } from 'redux'
 
 const initialWheelState = 0
 function wheel(state = initialWheelState, action) {
-  return state
+  switch(action.type){
+    default:
+      return state
+  }
 }
 
 const initialQuizState = null
