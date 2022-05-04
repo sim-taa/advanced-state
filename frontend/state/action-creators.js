@@ -1,5 +1,10 @@
 // ❗ You don't need to add extra action creators to achieve MVP
-export function moveClockwise() { }
+import * as type from './action-types'
+import axios from 'axios';
+
+export function moveClockwise(value) {
+  return { type: type.MOVE_CLOCKWISE, payload: value };
+}
 
 export function moveCounterClockwise() { }
 
@@ -34,6 +39,5 @@ export function postQuiz() {
     // On successful POST:
     // - Dispatch the correct message to the the appropriate state
     // - Dispatch the resetting of the form
-  }
-}
+  }}
 // ❗ On promise rejections, use log statements or breakpoints, and put an appropriate error message in state

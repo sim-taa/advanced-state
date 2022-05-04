@@ -12,7 +12,7 @@ In this challenge, you will write the logic for [THIS APP](https://advanced-stat
 ❗ Other configurations might work but haven't been tested.
 
 ## Project Setup
-
+   
 - Fork, clone, and `npm install`. You won't need to add any extra libraries.
 - Launch the project in a development server executing `npm run dev`.
 - Visit your app by navigating Chrome to `http://localhost:3000`.
@@ -28,7 +28,7 @@ Open the live prototype linked above and study its functionality using the follo
 
 ### Important notes from "Product"
 
-- The routes **don't lose their state** by navigating the links back and forth:
+- The routes **shouldn't lose their state** by navigating the links back and forth:
   - Current position of the "B" in the wheel is maintained.
   - Current quiz question stays loaded.
   - Values inside the form are kept.
