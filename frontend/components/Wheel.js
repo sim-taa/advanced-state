@@ -1,10 +1,10 @@
 import React, {useReducer} from 'react'
 import { moveClockwise, moveCounterClockwise } from '../state/action-creators'
 import { connect } from 'react-redux'
-import { wheel, initalWheelState } from '../state/reducer'
+//import { wheel, initalWheelState } from '../state/reducer'
 
 function Wheel(props) {
-  const { wheel, initalWheelState,moveClockwise, moveCounterClockwise } = props;
+  const { wheel, initalWheelState, moveClockwise, moveCounterClockwise } = props;
 
    const handleClockwise = (evt) => {
      const { value } = evt.target;
@@ -49,10 +49,8 @@ function Wheel(props) {
                     {props.wheel === 5 ? 'B' : ''}</div>{/* --i is a custom CSS property, no need to touch that nor the style object */}
       </div>
       <div id="keypad">
-        <button id="counterClockwiseBtn" >Counter clockwise</button>
-        <button id='clockwiseBtn' onClick={handleCounterClockwise}>
-                     Clockwise
-                 </button>
+        <button id="counterClockwiseBtn" onClick={handleCounterClockwise}>Counter clockwise</button>
+        <button id='clockwiseBtn' onClick={handleClockwise}>Clockwise</button>
       </div>
     </div>
   )
