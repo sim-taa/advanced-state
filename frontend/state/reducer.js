@@ -33,19 +33,41 @@ function wheel(state = initialWheelState, action) {
       return state;
   }}
 
-const initialQuizState = null
+const initialQuizState = '';
 function quiz(state = initialQuizState, action) {
-  return state
+  switch (action.type) {
+    case type.SET_QUIZ_INTO_STATE:
+     if(action.payload){
+  return {...action.payload}
+} else {
+  return initialQuizState
+}
+    default:
+        return state;
+}
 }
 
-const initialSelectedAnswerState = null
+const initialSelectedAnswerState = '';
 function selectedAnswer(state = initialSelectedAnswerState, action) {
-  return state
-}
+  switch (action.type) {
+    case type.SET_QUIZ_INTO_STATE:
+      if(action.payload){
+        return {...action.payload}
+      } else  {
+        return initialQuizState
+      }
+    default: 
+      return state
+}}
 
 const initialMessageState = ''
 function infoMessage(state = initialMessageState, action) {
-  return state
+  switch (action.type) {
+    case type.SET_INFO_MESSAGE:
+        return action.payload;
+    default:
+        return state;
+}
 }
 
 const initialFormState = {
