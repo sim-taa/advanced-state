@@ -50,14 +50,11 @@ function quiz(state = initialQuizState, action) {
 const initialSelectedAnswerState = '';
 function selectedAnswer(state = initialSelectedAnswerState, action) {
   switch (action.type) {
-    case type.SET_QUIZ_INTO_STATE:
-      if(action.payload){
-        return {...action.payload}
-      } else  {
-        return initialQuizState
-      }
+    case type.SET_SELECTED_ANSWER:
+        return action.payload;
     default: 
-      return state
+      return state;
+  
 }}
 
 const initialMessageState = ''
